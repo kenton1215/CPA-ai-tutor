@@ -1,0 +1,20 @@
+.env
+.streamlit/secrets.toml
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+chroma_db/
+data/kb_cache/
+data/*.db
+data/cpa_user.db*
+data/cpa_docs/2026年CPA考试辅导教材-公司战略与风险管理.pdf
+
+# ---------- 部署到 Streamlit Community Cloud（按需取消注释） ----------
+# 知识库随仓库打包，Cloud 实例启动即有教材/真题文本与真题 PDF（仓库请设为
+# 私有，避免对外分发教材/真题内容；单个 PDF 超过 GitHub 100MB 上限的不要上传）：
+# !data/cpa_docs/
+# !data/kb_cache/
+# !chroma_db/
+# 注意：data/cpa_user.db 不要上传（内含账号密码哈希，且 Cloud 实例重启会重置）

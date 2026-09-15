@@ -1,0 +1,53 @@
+[theme]
+base = "light"
+primaryColor = "#155E9E"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F3F7FC"
+textColor = "#1F2A37"
+linkColor = "#155E9E"
+linkUnderline = false
+borderColor = "#DCE5F0"
+showWidgetBorder = true
+showSidebarBorder = true
+baseRadius = "10px"
+buttonRadius = "10px"
+baseFontSize = 15
+headingFontSizes = ["30px", "22px", "18px", "16px", "14px", "13px"]
+headingFontWeights = [700, 700, 600, 600, 500, 500]
+font = "sans-serif"
+codeBackgroundColor = "#F3F7FC"
+codeTextColor = "#1F2A37"
+chartCategoricalColors = [
+    "#155E9E",
+    "#2E7D32",
+    "#EF6C00",
+    "#7B1FA2",
+    "#C62828",
+    "#00695C",
+    "#5D4037",
+]
+dataframeBorderColor = "#DCE5F0"
+dataframeHeaderBackgroundColor = "#F3F7FC"
+redColor = "#D32F2F"
+orangeColor = "#EF6C00"
+yellowColor = "#B28704"
+greenColor = "#2E7D32"
+blueColor = "#155E9E"
+violetColor = "#7B1FA2"
+
+[theme.sidebar]
+backgroundColor = "#F3F7FC"
+secondaryBackgroundColor = "#E7EEF7"
+textColor = "#1F2A37"
+borderColor = "#DCE5F0"
+primaryColor = "#155E9E"
+
+[server]
+headless = true
+# 局域网/服务器部署：允许手机通过 IP 访问；正式部署建议经 Nginx/HTTPS 反代
+address = "0.0.0.0"
+# 上传 PDF 大小上限（MB），教材/真题扫描件通常较大
+maxUploadSize = 200
+
+[browser]
+gatherUsageStats = false

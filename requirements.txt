@@ -1,0 +1,26 @@
+# ============================================================
+# CPA 智能备考助手 - 统一依赖清单（运行 + 开发测试）
+#
+# 这是项目唯一依赖文件，一条命令即可安装全部依赖：
+#   pip install -r requirements.txt
+#
+# 测试命令：
+#   python -m pytest -q
+# ============================================================
+
+# ---------- 运行依赖：Streamlit 网页应用 ----------
+streamlit>=1.63,<2.0          # Web 界面（导航/图表/状态管理；st.title(icon=) 等新参数需 1.63+）
+pypdf>=4.0                    # PDF 文本提取
+requests>=2.31                # 调用 OpenAI 兼容 /chat/completions 与 /embeddings
+python-dotenv>=1.0            # 读取根目录 .env 配置
+chromadb>=0.4.13,<0.7         # 本地向量索引（可选：无向量索引时自动回退关键词检索）
+qrcode>=8.0                   # 登录页生成“微信扫一扫”二维码
+
+# ---------- 可选：本地 Embedding 模型（仅当 EMBEDDING_PROVIDER=local 时需要） ----------
+# Streamlit Community Cloud 免费版内存 1GB，不建议安装（依赖 torch 体积大、
+# 加载约 500MB 内存）；Cloud 部署请使用 EMBEDDING_PROVIDER=api（远程向量化），
+# 或直接使用关键词检索（无需任何 Embedding）。
+# 本地需要本地向量模型时再执行：pip install sentence-transformers>=3.0
+
+# ---------- 开发与测试依赖 ----------
+pytest>=8.0                   # 单元测试与 Streamlit AppTest 冒烟测试
